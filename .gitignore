@@ -19,7 +19,7 @@
 .ssh
 .sudo*
 .thunderbird
-.vim/$
+.vim/
 .viminfo
 .vscode
 .wget-hsts
@@ -37,4 +37,5 @@ snap
 .cache
 .gnome
 gocode
-
+.nv
+react

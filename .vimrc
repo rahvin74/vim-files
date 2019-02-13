@@ -673,4 +673,4 @@ endif
 " buffers
 nmap <silent> <tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nmap <silent> <s-tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-map <C-w> :Bdelete<CR>
+map <C-w> :bdelete<CR>

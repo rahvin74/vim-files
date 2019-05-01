@@ -7,7 +7,9 @@ In addition to following this tutorial on how to get Terminator working with Win
 https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/
 
 1. I needed to add the following to my .profile or .bashrc file.
+
    `export "LIBGL_ALWAYS_INDIRECT=1"`
+   
 2. I was having a dBus issue launching. Buried in the comments of the above link I found this this gem:
 
    `> sudo apt-get install dbus-x11`

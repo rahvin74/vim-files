@@ -11,6 +11,7 @@ https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-ws
 2. I was having a dBus issue launching. Buried in the comments of the above link I found this this gem:
 
    `> sudo apt-get install dbus-x11`
+   
    `> sudo /etc/init.d/dbus restart`
 
 The source for that is here: https://github.com/Microsoft/WSL/issues/2016

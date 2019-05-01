@@ -19,11 +19,11 @@ https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-ws
 The source for that is here: https://github.com/Microsoft/WSL/issues/2016
 
 3. I think I might add DISPLAY=:0 to my .profile or .bashrc file.
-5. The Neovim version that comes with WSL (Ubuntu 18.04) is older and doesn't work with some of the plugins I use. I found the Neovim PPA at the following site and installed the latest stable version of Neovim from there.
+4. The Neovim version that comes with WSL (Ubuntu 18.04) is older and doesn't work with some of the plugins I use. I found the Neovim PPA at the following site and installed the latest stable version of Neovim from there.
 
 https://launchpad.net/~neovim-ppa/+archive/ubuntu/stable
 
-4. Lastly, some of the dir colors for the WSL were horrible. Turns out this isn't a WSL thing, just a Linux thing for showing directory permissions. Regardless, it's hideous so I want to change it. Here are some reasources I found for this.
+5. Lastly, some of the dir colors for the WSL were horrible. Turns out this isn't a WSL thing, just a Linux thing for showing directory permissions. Regardless, it's hideous so I want to change it. Here are some reasources I found for this.
 
 https://github.com/Microsoft/vscode/issues/7556
 

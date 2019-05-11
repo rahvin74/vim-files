@@ -117,7 +117,17 @@ Plug 'xolox/vim-lua-inspect'
 Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
-
+"*****************************************************************************
+"*****************************************************************************
+"" Plugins for writing.
+Plug 'reedes/vim-pencil' " Super-powered writing things
+Plug 'tpope/vim-abolish' " Fancy abbreviation replacements
+Plug 'junegunn/limelight.vim' " Highlights only active paragraph
+Plug 'junegunn/goyo.vim' " Full screen writing mode
+Plug 'reedes/vim-lexical' " Better spellcheck mappings
+Plug 'reedes/vim-litecorrect' " Better autocorrections
+Plug 'reedes/vim-textobj-sentence' " Treat sentences as text objects
+Plug 'reedes/vim-wordy' " Weasel words and passive voice
 "*****************************************************************************
 "*****************************************************************************
 
@@ -410,6 +420,7 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 
 " snippets
+" let g:UltiSnipsUsePythonVersion=3
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
@@ -667,7 +678,7 @@ nmap <F7> :NERDTree<CR>
 
 " palenight config
 set background=dark
-colorscheme palenight
+colorscheme angr
 
 if (has("termguicolors"))
     set termguicolors
@@ -677,3 +688,24 @@ endif
 nmap <silent> <tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nmap <silent> <s-tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
 map <C-w> :bdelete<CR>
+
+"" Config for writing plugins
+augroup pencil
+ autocmd!
+ autocmd filetype markdown,mkd call pencil#init()
+     \ | call lexical#init()
+     \ | call litecorrect#init()
+     \ | setl spell spl=en_us fdl=4 noru nonu nornu
+     \ | setl fdo+=search
+augroup END
+
+" Pencil / Writing Controls {{{
+let g:pencil#wrapModeDefault = 'soft'
+let g:pencil#textwidth = 74
+let g:pencil#joinspaces = 0
+let g:pencil#cursorwrap = 1
+let g:pencil#conceallevel = 3
+let g:pencil#concealcursor = 'c'
+let g:pencil#softDetectSample = 20
+let g:pencil#softDetectThreshold = 130
+" }}}

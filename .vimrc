@@ -117,7 +117,17 @@ Plug 'xolox/vim-lua-inspect'
 Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
-
+"*****************************************************************************
+"*****************************************************************************
+"" Plugins for writing.
+Plug 'reedes/vim-pencil' " Super-powered writing things
+Plug 'tpope/vim-abolish' " Fancy abbreviation replacements
+Plug 'junegunn/limelight.vim' " Highlights only active paragraph
+Plug 'junegunn/goyo.vim' " Full screen writing mode
+Plug 'reedes/vim-lexical' " Better spellcheck mappings
+Plug 'reedes/vim-litecorrect' " Better autocorrections
+Plug 'reedes/vim-textobj-sentence' " Treat sentences as text objects
+Plug 'reedes/vim-wordy' " Weasel words and passive voice
 "*****************************************************************************
 "*****************************************************************************
 
@@ -410,6 +420,7 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 
 " snippets
+" let g:UltiSnipsUsePythonVersion=3
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"

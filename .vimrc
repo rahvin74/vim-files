@@ -504,7 +504,7 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
 let g:syntastic_go_checkers = ['golint', 'govet']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_enabled = ['vet', 'errcheck']
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -667,7 +667,7 @@ nmap <F7> :NERDTree<CR>
 
 " palenight config
 set background=dark
-colorscheme palenight
+colorscheme angr
 
 if (has("termguicolors"))
     set termguicolors
@@ -676,4 +676,6 @@ endif
 " buffers
 nmap <silent> <tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nmap <silent> <s-tab> :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
-map <C-w> :bdelete<CR>
+nmap <C-w> :bdelete<CR>
+nmap <F10> :vertical resize +2<CR>
+nmap <F9> :vertical resize -2<CR>

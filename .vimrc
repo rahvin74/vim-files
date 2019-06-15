@@ -49,6 +49,7 @@ Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'Valloric/YouCompleteMe'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else

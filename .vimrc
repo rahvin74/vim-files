@@ -46,7 +46,6 @@ Plug 'majutsushi/tagbar'
 Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
-Plug 'sheerun/vim-polyglot'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'Valloric/YouCompleteMe'
@@ -131,6 +130,8 @@ Plug 'reedes/vim-textobj-sentence' " Treat sentences as text objects
 Plug 'reedes/vim-wordy' " Weasel words and passive voice
 "*****************************************************************************
 "*****************************************************************************
+
+Plug 'sheerun/vim-polyglot'
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -566,6 +567,11 @@ augroup go
   au FileType go imap <C-g> <esc>:<C-u>GoDecls<cr>
   au FileType go imap <leader>dr <esc>:<C-u>GoDeclsDir<cr>
   au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
+  au Filetype go nmap <leader>s :GoDebugStep<cr>
+  au Filetype go nmap <leader>n :GoDebugNext<cr>
+  au Filetype go nmap <leader>o :GoDebugStepOut<cr>
+  au FileType go nmap <leader>b :GoDebugBreakpoint<cr>
+  au FileType go nmap <leader>p :GoDebugStop<cr>
 
 augroup END
 
